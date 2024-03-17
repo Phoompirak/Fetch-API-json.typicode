@@ -13,7 +13,7 @@ function ApiContent({ search }) {
             if (!res.status == 200) {
                 throw new Error('Error fetching data');
             }
-            setUsers([...users, ...res.data.map((val) => ({ id: val.id, userId: val.userId, title: val.title, body: val.body })), { id: 9999999, userId: "999999999+", title: "Phoompirak KRJ, FulStack Developer", body: "โคตรเก่งมากกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกก"}, { id: 999, userId: "999+", title: "Phat, FulStack Developer", body: "โคตรเก่งมากกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกก"}])
+                setUsers([...users, ...res.data.map((val) => ({ id: val.id, userId: val.userId, title: val.title, body: val.body })), { id: 9999999, userId: "999999999+", title: "Phoompirak KRJ, FulStack Developer", body: "โคตรเก่งมากกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกก"}, { id: 999, userId: "999+", title: "Phat, FulStack Developer", body: "โคตรเก่งมากกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกก"}])
         }
         catch (error) {
             console.error('Error fetching data:', error);
@@ -24,7 +24,7 @@ function ApiContent({ search }) {
         fetchAPI();
     }, [])
 
-    console.log(search)
+    // console.log(search)
 
     return (
         <table>
@@ -38,7 +38,7 @@ function ApiContent({ search }) {
             <tbody>
                 {
                     /* อย่าลืม .map(value => ()) ต้องใช้วงเล็บธรรมดา ไม่มีวงเล็บปีกกา  */
-                    users?.filter((item) => {
+                    users ? users?.filter((item) => {
                         return (
                             search.toLowerCase() === ''
                                 ? item
@@ -56,6 +56,7 @@ function ApiContent({ search }) {
                             title={user.title}
                             body={user.body} />
                     ))
+                    : <p id='loading-users'>Loading users...</p>
                 }
             </tbody>
         </table >

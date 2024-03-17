@@ -1,6 +1,6 @@
-div {
+.search-users {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
     justify-content: center;
     align-items: center;
     margin: 14px auto;
@@ -12,10 +12,11 @@ div {
         border-radius: 3rem;
         margin-right: 10px;
         font-size: larger;
-        padding: 10px 20px 10px 10px;
+        padding: 10px 20px 10px;
 
         &:focus {
-            border: none;
+            border: 1px solid black;
+            outline: none;
         }
     }
 

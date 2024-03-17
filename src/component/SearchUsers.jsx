@@ -12,8 +12,8 @@ export default function SearchUsers() {
 
     return (
         <>
-            <div>
-                <input type="search" onChange={handleSearchChange}></input>
+            <div className="search-users">
+                <input id="search" type="search" onChange={handleSearchChange} placeholder="Search Users"></input>
                 <label htmlFor="search"><FaSearch /></label>
             </div>
             <ApiContent search={search.toLowerCase()}/>

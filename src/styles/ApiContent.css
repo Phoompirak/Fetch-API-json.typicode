@@ -1,16 +1,21 @@
 table {
+    width: 100%;
     border-collapse: collapse;
     overflow: hidden;
 
     & thead {
-        border-bottom: solid 1px #EAEDED;
+        border-bottom: solid 1.5px #EAEDED;
 
         & tr {
-
+            width: 100%;
             & th {
                 padding: 16px 24px;
-                text-align: left
-
+                /* text-align: left */
+                
+                &:nth-child(1) {
+                    min-width: 80px;
+                    max-width: 25%;
+                }
             }
         }
     }
@@ -34,10 +39,21 @@ table {
         }
     }
 }
-th:nth-child(1) {
-    min-width: 150px;
+
+#loading-users {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: blink 1s infinite;
 }
 
-.hide {
-    display: none;
-}
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
