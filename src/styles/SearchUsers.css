@@ -1,0 +1,29 @@
+div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 14px auto;
+
+    & input {
+        width: 450px;
+        height: 40px;
+        border: 1px solid gray;
+        border-radius: 3rem;
+        margin-right: 10px;
+        font-size: larger;
+        padding: 10px 20px 10px 10px;
+
+        &:focus {
+            border: none;
+        }
+    }
+
+    & label {
+
+        & svg {
+            width: 26px;
+            height: 26px;
+        }
+    }
+}

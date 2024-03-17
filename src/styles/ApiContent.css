@@ -1,0 +1,43 @@
+table {
+    border-collapse: collapse;
+    overflow: hidden;
+
+    & thead {
+        border-bottom: solid 1px #EAEDED;
+
+        & tr {
+
+            & th {
+                padding: 16px 24px;
+                text-align: left
+
+            }
+        }
+    }
+    
+    & tbody {
+        gap: 1rem;
+        padding: 50px;
+        
+        & tr {
+            &:nth-child(odd) {
+                background-color: #daeefa;
+            }
+            
+            & td {
+                padding: 30px;
+                
+                &:nth-child(1) {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+th:nth-child(1) {
+    min-width: 150px;
+}
+
+.hide {
+    display: none;
+}
