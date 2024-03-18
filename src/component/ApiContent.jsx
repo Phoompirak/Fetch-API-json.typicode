@@ -6,10 +6,11 @@ import '../styles/ApiContent.css'
 
 function ApiContent({ search }) {
     const [users, setUsers] = useState([])
+    const urlFetch = "https://jsonplaceholder.typicode.com/posts"
 
-    const fetchAPI = async () => {
+    const fetchAPI = async (urlFetch) => {
         try {
-            const res = await axios.get("https://jsonplaceholder.typicode.com/posts")
+            const res = await axios.get(urlFetch)
             if (!res.status == 200) {
                 throw new Error('Error fetching data');
             }
@@ -21,10 +22,8 @@ function ApiContent({ search }) {
     }
 
     useEffect(() => {
-        fetchAPI();
+        fetchAPI(urlFetch);
     }, [])
-
-    // console.log(search)
 
     return (
         <table>
