@@ -1,4 +1,13 @@
-try fetching api from https://jsonplaceholder.typicode.com/posts
+### Deployed statice web on Render
+- https://try-fetch-api.onrender.com/
+
+## This website can
+- search filter
+- debouncing(delay on search)
+
+
+## try fetching api from
+- https://jsonplaceholder.typicode.com/posts
 
 # React + Vite
 
