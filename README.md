@@ -5,6 +5,8 @@
 - search filter
 - debouncing(delay on search)
 
+![ScreenShot-My-web-fetching-api](./public/Screenshot_my_web.png)
+
 
 ## try fetching api from
 - https://jsonplaceholder.typicode.com/posts
